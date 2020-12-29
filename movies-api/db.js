@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 dotenv.config();
 
 // Connect to database
+mongoose.set('useFindAndModify', false)
 mongoose.connect(process.env.mongoDB,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 const db = mongoose.connection;
 
