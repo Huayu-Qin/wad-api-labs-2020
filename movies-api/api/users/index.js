@@ -19,7 +19,7 @@ router.post('/', async (req, res, next) => {
         });
     }
     if (req.query.action === 'register') {
-        const regularPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$"/;
+        const regularPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/;
         if (!regularPassword.test(req.body.password)) {
             res.status(401).json({
                 code: 401,
